@@ -55,8 +55,8 @@
         /* PORTFOLIO GRID */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 60px 30px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 60px 40px;
         }
 
         .portfolio-item {
@@ -65,9 +65,10 @@
             display: block;
         }
 
+        /* SQUARE THUMBNAILS */
         .thumbnail {
             width: 100%;
-            height: 240px;
+            aspect-ratio: 1 / 1; /* Forces square shape */
             background: #ffffff;
             position: relative;
             overflow: hidden;
@@ -78,14 +79,14 @@
         .thumbnail img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Standard crop for films/ads */
+            object-fit: cover; /* Fills square for cinematic look */
             display: block;
         }
 
-        /* FIXED: Zoomed out style for Audio Storytelling */
+        /* Zoomed out style for Audio Storytelling to avoid cropping */
         .audio-item .thumbnail img {
-            object-fit: contain; /* Shows the full image without zooming/cropping */
-            background: #f9f9f9;
+            object-fit: contain; 
+            background: #fdfdfd;
         }
 
         .portfolio-content { padding: 0 5px; }
